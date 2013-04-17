@@ -15,3 +15,7 @@ development:
 test:
   <<: *defaults
   database: blog_test
+
+production:
+  <<: *defaults
+  database: sb_production
