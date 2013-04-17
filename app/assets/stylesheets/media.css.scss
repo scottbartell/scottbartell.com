@@ -15,8 +15,23 @@
   }
 }
 
-@media screen and (max-width: 550px) {
-  #articles #categories li a {
-    font-size: 2em;
+@media screen and (max-width: 600px) {
+
+  html body {
+    font-size: 16px;
+  }
+  section #articles, section #content {
+    margin-left: 0px;
+    width: 100%;
+  }
+  #articles {
+
+    header nav ul {
+      text-align: center;
+    }
+
+    #categories li a {
+      font-size: 2em;
+    }
   }
 }
