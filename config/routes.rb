@@ -5,6 +5,21 @@ Blog::Application.routes.draw do
 
   resources :categories, only: [:index, :show]
 
+  # Redirects
+  get '/blog', to: redirect('/')
+  get '/blog/:page', to: redirect { |params, request| "/#{params[:page]}" }
+  get '/about-scott-bartell', to: redirect('/')
+  get '/about', to: redirect('/')
+  get '/why-google', to: redirect('/why-google+-pages-should-not-be-ignored')
+  get '/tags', to: redirect('/categories')
+  get '/personal', to: redirect('/categories')
+  get '/category', to: redirect('/categories')
+  get '/ramblings', to: redirect('/categories')
+  get '/category/*other', to: redirect('/categories')
+  get '/tags/social-media', to: redirect('/categories/marketing')
+  get '/tags/business', to: redirect('/categories/management')
+  get '/tags/:name', to: redirect('/categories/%{name}')
+
   # Pagination
   get '/:page', to: 'posts#index', as: 'blog_page', constraints: { page: /[0-9]+/}
 
