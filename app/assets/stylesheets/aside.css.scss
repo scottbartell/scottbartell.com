@@ -1,0 +1,41 @@
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+
+  #bio {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 30%;
+
+    h1 {
+      margin: .4em 0 .2em;
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+    }
+
+    h2 {
+      margin: .2em 0;
+      font-weight: 500;
+      font-size: 1.3em;
+    }
+
+    img {
+      border: 3px solid #fff;
+      -webkit-box-shadow: rgba(0,0,0,0.5) 0 0 3px;
+      box-shadow: rgba(0,0,0,0.5) 0 0 3px;
+      background: #fff no-repeat;
+      width: 100px;
+      height: 100px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

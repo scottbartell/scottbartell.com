@@ -1,0 +1,22 @@
+@media screen and (max-width: 1000px) {
+  section #articles, section #content {
+    margin-left: 10%;
+    margin-top: 0px;
+    width: 80%;
+  }
+  body aside {
+    position: static;
+    margin: 0 10%;
+    width: 80%;
+    #bio {
+      position: static;
+      width: initial;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #articles #categories li a {
+    font-size: 2em;
+  }
+}

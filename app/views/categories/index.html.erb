@@ -1,0 +1,22 @@
+<%- title "Categories" -%>
+
+<section id="articles">
+  <header>
+    <nav>
+      <ul>
+        <li><%= link_to 'articles', root_path %></li>
+        <li class="active"><%= link_to 'categories', categories_path %></li>
+      </ul>
+    </nav>
+  </header>
+  <ul id="categories">
+    <% for category in @categories %>
+        <li class="<%= category.name %>">
+          <%= link_to(category) do %>
+            <%= category.name.titleize %>
+            <%= content_tag(:span, category.count, class: "category_count") %>
+          <% end %>
+        </li>
+    <% end %>
+  </ul>
+</section>

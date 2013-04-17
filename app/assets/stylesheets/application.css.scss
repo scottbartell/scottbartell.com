@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require media
+ *= require_self
+ *= require_tree .
+ */
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Neuton', serif;
+  color: #555;
+  font-size: 18px;
+}
+
+h1 {
+  color: #333;
+  font-size: 2em;
+}
+
+#articles, #content {
+  margin-left: 33%;
+  margin-top: 40px;
+  width: 55%;
+}
+
+a.twitter-username{
+  color: #4099FF;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid;
+  }
+
+  &:before {
+    content: "@";
+  }
+}

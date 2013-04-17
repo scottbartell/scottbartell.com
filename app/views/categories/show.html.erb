@@ -1,0 +1,27 @@
+<%- title "Scott Bartell Blog" -%>
+
+<section id="articles" class="<%= @category.name %>">
+  <header>
+    <div class="top">
+      <span class="category"><%= @category.name %></span>
+      <span class="more"><%= link_to 'More', categories_path %></span>
+    </div>
+  </header>
+  <div class="wrapper">
+    <%- if @posts && @posts.length > 0 -%>
+    <% for post in @posts %>
+      <article>
+        <h1><%= link_to post.title, post %></h1>
+        <p>Posted <%= post_published_time post %> in <%= post_category(post).titleize %></p>
+      </article>
+    <% end %>
+  </div>
+  <footer class="<%= @category.name %>">
+  <%= paginate @posts, :outer_window => 2, :inner_window => 1 -%>
+  
+  <%- else -%>
+    <p>Nothing to see here. Move along.</p>
+    <footer class="<%= @category.name %>">
+  <%- end -%>
+  </footer>
+</section>

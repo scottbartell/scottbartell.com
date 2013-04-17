@@ -1,0 +1,131 @@
+$categories: startups orange, ruby red, management teal, marketing green, design purple, home #333;
+
+.top {
+  padding-top: 5px;
+  height: 35px;
+
+  .more {
+    float: right;
+    padding-top: 2px;
+
+    a {
+      text-decoration: none;
+      color: #e3e3e1;
+
+      &:after {
+        content: ' >'
+      }
+    }
+  }
+}
+
+.category, .post .category {
+  letter-spacing: 1px;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: .8em;
+  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      border: none;
+      text-decoration: none;
+    }
+  }
+}
+
+@each $category in $categories {
+  .#{nth($category, 1)} {
+    color: nth($category, 2);
+
+    header {
+      border-top: 5px solid;
+    }
+
+    a {
+      color: nth($category, 2);
+      
+      &:hover {
+        color: darken(nth($category, 2), 10%);
+      }
+    }
+
+    p, ul, ol, pre {
+      color: #555;
+    }
+  }
+
+  #categories {
+    padding: 0;
+    margin-top: 60px;
+    
+    li.#{nth($category, 1)} {
+      list-style: none;
+
+      a {
+        display: block;
+        padding: 50px 30px;
+        background-color:  nth($category, 2);
+        color: #fff;
+        font-size: 2.5em;
+        text-decoration: none;
+        -webkit-transition: all 0.1s ease;
+        -moz-transition: all 0.1s ease;
+        -o-transition: all 0.1s ease;
+        transition: all 0.1s ease;
+      
+        &:hover {
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1);
+          -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+        }
+
+        .category_count {
+          color: rgba(#fff, .6);
+          float: right;
+        }
+      }
+    }
+  }
+
+  footer.#{nth($category, 1)} {
+    font-size: 1.15em;
+    padding: 30px 15px;
+    background-color:  nth($category, 2);
+    color: #fff;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        display: inline-block;
+
+        &.next {
+          float: right;
+        }
+
+        .gray {
+          color: rgba(#fff, 0.6)
+        }
+      }
+    }
+  }
+
+  #articles article p a:hover.#{nth($category, 1)} {
+    color: nth($category, 2);
+  }
+}

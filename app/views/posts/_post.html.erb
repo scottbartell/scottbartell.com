@@ -1,0 +1,8 @@
+<article class="post <%= post_category(post) %>">
+  <header>
+    <span class="category"><%= post_category_link(post) %></span>
+    <h1><%= link_to post.title, post %></h2>
+    <p>by Scott Bartell on <time datetime="<%= post.published_at.as_json %>"><%= post_published_time post %></time></p>
+  </header>
+  <%= post.html_content.html_safe %>
+</article>
