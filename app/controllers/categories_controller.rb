@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   respond_to :html, :xml, :json
 
   def index
-    respond_with @categories = Category.all
+    respond_with @categories = Category.all.reverse
   end
 
   def show
