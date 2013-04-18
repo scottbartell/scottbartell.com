@@ -18,4 +18,8 @@ class Category < ActiveRecord::Base
   def count
     Post.where(category_id: self.id).count.to_i
   end
+
+  def self.list_all
+    Category.all.map{|c| c.name}.reverse
+  end
 end
