@@ -107,6 +107,7 @@ $categories: javascript gold, startups orange, ruby red, management teal, market
   }
 
   footer.#{nth($category, 1)} {
+    margin-top: 3em;
     font-size: 1.15em;
     padding: 30px 15px;
     background-color:  nth($category, 2);
