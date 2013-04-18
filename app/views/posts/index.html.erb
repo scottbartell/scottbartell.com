@@ -1,4 +1,7 @@
 <%- title "Scott Bartell Blog" -%>
+<% content_for :head do %>
+  <%= rel_next_prev_link_tags @posts %>
+<% end %>
 
 <section id="articles">
   <header>
