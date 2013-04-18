@@ -13,6 +13,6 @@ class CategoriesController < ApplicationController
     redirect_to categories_url and return unless @category
 
     # Get posts for category
-    respond_with @posts = Post.where(category_id: @category.id).published.page(params[:page]).per(Post.per_page)
+    respond_with @posts = Post.where(category_id: @category.id).published.recent.page(params[:page]).per(Post.per_page)
   end
 end
