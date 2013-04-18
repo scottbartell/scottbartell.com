@@ -1,0 +1,19 @@
+<% title "Categories" %>
+
+<div class="admin">
+  <p><%= link_to "New Category", new_admin_category_path %></p>
+</div>
+
+<%- if @categories -%>
+  <table>
+  <% for category in @categories %>
+    <tr>
+      <td><%=h category.name %></td>
+      <td><%= link_to "Show", category %></td>
+      <td><%= link_to "Edit", edit_admin_category_path(category) %></td>
+    </tr>
+  <% end %>
+  </table>
+<%- else -%>
+<p>Nothing to see here. Move along.</p>
+<%- end -%>

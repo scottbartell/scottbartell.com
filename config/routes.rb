@@ -20,6 +20,13 @@ Blog::Application.routes.draw do
   get '/tags/business', to: redirect('/categories/management')
   get '/tags/:name', to: redirect('/categories/%{name}')
 
+  # Admin
+  get '/admin', to: 'admin#index'
+  namespace :admin do
+    resources :posts, only: [:show, :new, :create, :update, :edit, :destroy, :index]
+    resources :categories,  only: [:new, :create, :update, :edit, :destroy, :index]
+  end
+
   # Pagination
   get '/:page', to: 'posts#index', as: 'blog_page', constraints: { page: /[0-9]+/}
 

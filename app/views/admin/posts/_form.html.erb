@@ -1,0 +1,26 @@
+<%= form_for [:admin, post] do |f| %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :style => "width:100%;height:250px" %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :published_at, "Published" %><br />
+    <%= f.datetime_select :published_at %>
+  </p>
+  <p>
+    <%= f.check_box :homepageable %> <%= f.label :homepageable %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

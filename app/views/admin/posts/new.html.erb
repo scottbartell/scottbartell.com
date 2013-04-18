@@ -1,0 +1,7 @@
+<%- title 'New Post' -%>
+
+<%= render partial: 'form', locals: { post: @post } %>
+
+<div class="admin">
+  <p><%= link_to 'Back to List', admin_posts_path %></p>
+</div>

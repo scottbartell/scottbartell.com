@@ -1,0 +1,10 @@
+<% title 'Edit Category' %>
+
+<%= render partial: 'form', locals: { category: @category } %>
+
+<div class="admin">
+  <p>
+    <%= link_to 'Show', @category %> |
+    <%= link_to 'View All', categories_path %>
+  </p>
+</div>
