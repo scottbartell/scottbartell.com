@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/amatsuda/kaminari.git
+  revision: 533993fde02e4cb08ae8581a0cc69b5c6b291c1f
+  specs:
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,9 +56,6 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.7)
-    kaminari (0.14.1)
-      actionpack (>= 3.0.0)
-      activesupport (>= 3.0.0)
     kgio (2.8.0)
     mail (2.5.3)
       i18n (>= 0.4.0)
@@ -133,7 +138,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
   jbuilder (~> 1.0.1)
   jquery-rails
-  kaminari
+  kaminari!
   nokogiri
   pg
   pygments.rb

@@ -24,7 +24,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 # Pagination
-gem 'kaminari'
+gem 'kaminari', git: 'git://github.com/amatsuda/kaminari.git'
 
 # Markdown
 gem 'redcarpet'
