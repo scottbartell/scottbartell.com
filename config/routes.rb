@@ -2,8 +2,8 @@ Blog::Application.routes.draw do
 
   root to: 'posts#index'
   get '/posts.:format', to: 'posts#index'
-
-  resources :categories, only: [:index, :show]
+  get '/categories', to: 'categories#index'
+  #resources :categories, only: [:index, :show]
 
   # Redirects
   get '/blog', to: redirect('/')
@@ -14,7 +14,7 @@ Blog::Application.routes.draw do
   get '/why-google', to: redirect('/why-google+-pages-should-not-be-ignored')
   get '/tags', to: redirect('/categories')
   get '/personal', to: redirect('/categories')
-  get '/category', to: redirect('/categories')
+  #get '/category', to: redirect('/categories')
   get '/ramblings', to: redirect('/categories')
   get '/category/*other', to: redirect('/categories')
   get '/tags/social-media', to: redirect('/categories/marketing')
@@ -30,7 +30,11 @@ Blog::Application.routes.draw do
 
   # Pagination
   get '/:page', to: 'posts#index', as: 'blog_page', constraints: { page: /[0-9]+/}
+  get '/categories/:category/:page', to: 'categories#show', as: 'category_page', constraints: { page: /[0-9]+/}
 
   # Post
   get ':permalink', to: 'posts#show', as: 'post'
+
+  # Category
+  get '/categories/:category', to: 'categories#show', as: 'category'
 end

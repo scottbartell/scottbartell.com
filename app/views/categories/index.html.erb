@@ -1,5 +1,12 @@
-<%- title "Categories" -%>
+<%- title "Categories | ScottBartell.com" -%>
+<%- content_for(:head) do -%>
+<meta name="description" content="Articles written by Scott Bartell about <%= categories_list %>" />
+<link rel="canonical" href="<%= categories_url %>" />
 <meta property="og:description" content="Articles by category: <%= categories_list %>. All written by Scott Bartell" />
+<meta property="og:title" content="Categories | ScottBartell.com" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="<%= categories_url %>" />
+<%- end -%>
 
 <section id="articles">
   <header>
@@ -14,7 +21,7 @@
     <% for category in @categories %>
         <li class="<%= category.name %>">
           <%= link_to(category) do %>
-            <%= category.name.titleize %>
+            <%= category_title(category) %>
             <%= content_tag(:span, category.count, class: "category_count") %>
           <% end %>
         </li>

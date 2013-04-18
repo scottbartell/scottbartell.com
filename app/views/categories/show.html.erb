@@ -1,4 +1,13 @@
-<%- title "Scott Bartell Blog" -%>
+<%- title "#{@category.name.titleize} | Scott Bartell" -%>
+<%- content_for(:head) do -%>
+<meta name="description" content="<%= category_description(@category) %>" />
+<link rel="canonical" href="<%= category_url(@category) %>" />
+<meta property="og:description" content="<%= category_description(@category) %>" />
+<meta property="og:title" content="<%= category_title(@category) %> | Scott Bartell" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="<%= category_url(@category) %>" />
+<%- end -%>
+
 <% content_for :head do %>
   <%= rel_next_prev_link_tags @posts %>
 <% end %>
@@ -23,7 +32,7 @@
   <%= paginate @posts, :outer_window => 2, :inner_window => 1 -%>
   
   <%- else -%>
-    <p>Nothing to see here. Move along.</p>
+    <p>No articles have been posted in this category yet. Sorry.</p>
     <footer class="<%= @category.name %>">
   <%- end -%>
   </footer>

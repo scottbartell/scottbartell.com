@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    id = params[:id].downcase
+    id = params[:category].downcase
 
     # Find category
     @category = Category.find_by(name: id)
