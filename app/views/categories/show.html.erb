@@ -1,18 +1,18 @@
-<%- title "#{@category.name.titleize} | Scott Bartell" -%>
-<%- content_for(:head) do -%>
-<meta name="description" content="<%= category_description(@category) %>" />
-<link rel="canonical" href="<%= category_url(@category) %>" />
-<meta property="og:description" content="<%= category_description(@category) %>" />
-<meta property="og:title" content="<%= category_title(@category) %> | Scott Bartell" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="<%= category_url(@category) %>" />
-<%- end -%>
+<% title "#{@category.name.titleize}" %>
+<% content_for(:head) do %>
+  <meta name="description" content="<%= category_description(@category) %>">
+  <link rel="canonical" href="<%= category_url(@category) %>">
+  <meta property="og:description" content="<%= category_description(@category) %>">
+  <meta property="og:title" content="<%= category_title(@category) %> | Scott Bartell">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="<%= category_url(@category) %>">
+<% end %>
 
 <% content_for :head do %>
   <%= rel_next_prev_link_tags @posts %>
 <% end %>
 
-<section id="articles" class="<%= @category.name %>">
+<section id="posts" class="<%= @category.name %>">
   <header>
     <div class="top">
       <span class="category"><%= @category.name %></span>
@@ -20,20 +20,18 @@
     </div>
   </header>
   <div class="wrapper">
-    <%- if @posts && @posts.length > 0 -%>
+  <% if @posts && @posts.length > 0 %>
     <% for post in @posts %>
       <article>
         <h1><%= link_to post.title, post %></h1>
         <p>Posted <%= post_published_time post %> in <%= post_category(post).titleize %></p>
       </article>
     <% end %>
-  </div>
+  </div>  
+  <% else %>
+    <p>No articles have been posted in this category yet. Sorry.</p>
+  <% end %>
   <footer class="<%= @category.name %>">
   <%= paginate @posts, :outer_window => 2, :inner_window => 1 -%>
-  
-  <%- else -%>
-    <p>No articles have been posted in this category yet. Sorry.</p>
-    <footer class="<%= @category.name %>">
-  <%- end -%>
   </footer>
 </section>

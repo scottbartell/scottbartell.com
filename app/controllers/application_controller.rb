@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   private
   
   def error_not_found
-    render template: 'errors/not_found', layout: 'error'
+    render template: 'errors/not_found'
   end
 
 end

@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
     # Fetch
     @posts = Post.published.recent.page(page).per(per_page)
-
+    raise NotFoundError if @posts.blank?
     respond_with @posts, {only: [:title, :html_content, :published_at]}
   end
 

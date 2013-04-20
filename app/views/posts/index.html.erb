@@ -1,11 +1,14 @@
-<%- title "Articles | Scott Bartell" -%>
-
+<% title "Articles" %>
 <% content_for :head do %>
-  <%= rel_next_prev_link_tags @posts %>
+  <link rel="canonical" href="http://scottbartell.com/">
+  <meta property="og:description" content="Scott Bartell blogs about <%= categories_list %>">
+  <meta property="og:title" content="Articles | Scott Bartell">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://scottbartell.com/">
+  <% rel_next_prev_link_tags @posts %>
 <% end %>
-
-<section id="articles">
-  <header>
+<section id="posts">
+  <header class="main_head">
     <nav>
       <ul>
         <li class="active"><%= link_to 'articles', root_path %></li>
@@ -13,18 +16,17 @@
       </ul>
     </nav>
   </header>
-  <%- if @posts && @posts.length > 0 -%>
-  <% for post in @posts %>
-    <article>
-      <h1><%= link_to post.title, post %></h1>
-      <p>Posted <%= post_published_time post %> in <%= post_category_link(post) %></p>
-    </article>
+  <% if !@posts.blank? %>
+    <% for post in @posts %>
+      <article>
+        <h1><%= link_to post.title, post %></h1>
+        <p>Posted <%= post_published_time post %> in <%= post_category_link(post) %></p>
+      </article>
+    <% end %>
+  <% else %>
+    Sorry, no posts are available.
   <% end %>
   <footer class="home">
-  <%= paginate @posts, :outer_window => 2, :inner_window => 1 -%>
-  <%- else -%>
-  <p>Nothing to see here. Move along.</p>
-  </footer>
-  <%- end -%>
+    <%= paginate @posts, :outer_window => 2, :inner_window => 1 -%>
   </footer>
 </section>

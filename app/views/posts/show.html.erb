@@ -1,15 +1,14 @@
-<%- if @post -%>
-<%- title @post.title -%>
-<%- content_for(:head) do -%>
-<meta name="description" content="<%= post_summary(@post) %>" />
-<link rel="canonical" href="<%= post_url(@post) %>" />
-<meta property="og:description" content="<%= post_summary(@post) %>" />
-<meta property="og:title" content="<%= @post.title %>" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="<%= post_url(@post) %>" />
+<% title @post.title %>
+<% content_for(:head) do %>
+  <meta name="description" content="<%= post_summary(@post) %>">
+  <link rel="canonical" href="<%= post_url(@post) %>">
+  <meta property="og:description" content="<%= post_summary(@post) %>">
+  <meta property="og:title" content="<%= @post.title %>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="<%= post_url(@post) %>">
 <%- end -%>
 
-<section id="content">
+<section id="post">
   <%= render @post %>
   <footer class="<%= post_category(@post) %>">
     <nav class="posts">
@@ -33,7 +32,3 @@
     
   </footer>
 </section>
-<%- else -%>
-<%- title 'Post not found' -%>
-<p>Nothing to see here. Move along.</p>
-<%- end -%>

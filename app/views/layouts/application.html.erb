@@ -1,16 +1,27 @@
-<%- content_for :pre_content do -%>
-<aside>
-  <div id="bio">
-    <a href="/">
-      <img src="https://lh6.googleusercontent.com/-EoCZX5Y4bzk/UE0ZbUU_mLI/AAAAAAAADn8/4tlU1--WDhI/w526-h525-p-k/IMG_0307.JPG" alt="Scott Bartell">
-    </a>
-    <h1><%= link_to 'Scott Bartell', root_path %></h1>
-    <h2>Web Developer</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title><%= "#{yield(:title)} | " if content_for?(:title) %>Scott Bartell</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>">
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/scottbartell">
+  <link rel="me" href="https://plus.google.com/u/0/109955571462751281352">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Neuton|Inconsolata|Merriweather+Sans:700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <meta property="fb:app_id" content="<%= FACEBOOK_APP_ID %>">
+  <meta property="og:site_name" content="Scott Bartell">
+  <%= yield(:head) -%>
+</head>
+<body>
+  <%= render partial: 'layouts/aside' unless controller.class.parent == Admin %>
+  <div id="content">
+  <%= yield %>
   </div>
-</aside>
-<section>
-<%- end -%>
-<%- content_for :post_content do -%>
-</section>
-<%- end -%>
-<%= render file: 'layouts/abstract' %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= google_analytics %>
+</body>
+</html>
