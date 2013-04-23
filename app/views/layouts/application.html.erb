@@ -4,11 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title><%= "#{yield(:title)} | " if content_for?(:title) %>Scott Bartell</title>
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>">
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/scottbartell">
   <link rel="me" href="https://plus.google.com/u/0/109955571462751281352">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href='http://fonts.googleapis.com/css?family=Neuton|Inconsolata|Merriweather+Sans:700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
