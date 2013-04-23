@@ -34,3 +34,6 @@ gem 'pygments.rb'
 
 # Page descriptions
 gem 'nokogiri'
+
+# New Relic
+gem 'newrelic_rpm'
