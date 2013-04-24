@@ -64,6 +64,7 @@ GEM
     mime-types (1.22)
     minitest (4.7.1)
     multi_json (1.7.2)
+    newrelic_rpm (3.6.0.83)
     nokogiri (1.5.7)
     pg (0.14.1)
     polyglot (0.3.3)
@@ -139,6 +140,7 @@ DEPENDENCIES
   jbuilder (~> 1.0.1)
   jquery-rails
   kaminari!
+  newrelic_rpm
   nokogiri
   pg
   pygments.rb
