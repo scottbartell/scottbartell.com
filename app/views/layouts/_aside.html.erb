@@ -1,21 +1,21 @@
 <aside>
   <div id="bio">
-    <a href="/">
+    <%= link_to root_path, title: "Home" do %>
       <img src="https://lh6.googleusercontent.com/-EoCZX5Y4bzk/UE0ZbUU_mLI/AAAAAAAADn8/4tlU1--WDhI/w526-h525-p-k/IMG_0307.JPG" alt="Scott Bartell">
-    </a>
-    <h1><%= link_to 'Scott Bartell', root_path %></h1>
+    <% end %>
+    <h1><%= link_to 'Scott Bartell', root_path, title: "Home" %></h1>
     <h2>Web Developer</h2>
     <ul class="inline contact-icons">
-      <li><a href="mailto:me@scottbartell.com"><i class="general foundicon-mail"></a></i></li>
-      <li><a href="https://github.com/scottbartell"><i class="social foundicon-github"></a></i></li>
-      <li><a href="https://twitter.com/scottbartell"><i class="social foundicon-twitter"></a></i></li>
-      <li><a href="http://www.linkedin.com/in/scottsbartell"><i class="social foundicon-linkedin"></a></i></li>
+      <li><a href="mailto:me@scottbartell.com" rel="author" title="email"><i class="general foundicon-mail"></a></i></li>
+      <li><a href="https://github.com/scottbartell" rel="author" title="Github"><i class="social foundicon-github"></a></i></li>
+      <li><a href="https://twitter.com/scottbartell" rel="author" title="Twitter"><i class="social foundicon-twitter"></a></i></li>
+      <li><a href="http://www.linkedin.com/in/scottsbartell" rel="author" title="LinkedIn"><i class="social foundicon-linkedin"></a></i></li>
     </ul>
   </div>
   <div id="about">
-    <%= link_to about_path do %>
-      <i class="general-enclosed foundicon-plus"></i>
+    <%= link_to about_path, title: "About Scott Bartell" do %>
       <span>About Scott</span>
+      <i class="general-enclosed foundicon-plus"></i>
     <% end %>
   </div>
 </aside>

@@ -78,30 +78,41 @@ aside {
   }
 
   #about {
-    width: 153px;
-    height: 50px;
-    padding: 10px;
-    margin: -20px auto 0;
-    background-color: seagreen;
-    box-shadow: 1px 1px 5px #ccc;
+    position: fixed;
+    top: 30%;
+    left: -135px;
     @include transition(all 0.4s ease-in-out);
 
     &:hover {
-  -webkit-transform: rotate(-5deg);
-     -moz-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-       -o-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+        left: -5px;
+        @include rotate(-3deg);
       }
 
     a {
-      height: 100%;
-      margin-top: 20px;
-      text-align: center;
-      display: block;
-      color: white;
+      color: whitesmoke;
       text-decoration: none;
-      font-weight: bold;
+      padding: 10px;
+      background-color: #555;
+      display: inline;
+      box-shadow: 0 0 3px #222;
+      @include transition(background-color 0.6s linear);
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+
+    span {
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin: 0 6px;
+      font-size: 1.2em;
+    }
+
+    i {
+      font-size: 1.2em;
+      position: relative;
+      top: 4px;
     }
   }
 }
