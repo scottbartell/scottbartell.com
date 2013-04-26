@@ -3,7 +3,7 @@ Blog::Application.routes.draw do
   root to: 'posts#index'
   get '/posts.:format', to: 'posts#index'
   get '/categories', to: 'categories#index'
-  #resources :categories, only: [:index, :show]
+  get '/about', to: 'pages#about', as: 'about'
 
   # Redirects
   get '/blog', to: redirect('/')
@@ -14,7 +14,6 @@ Blog::Application.routes.draw do
   get '/why-google', to: redirect('/why-google+-pages-should-not-be-ignored')
   get '/tags', to: redirect('/categories')
   get '/personal', to: redirect('/categories')
-  #get '/category', to: redirect('/categories')
   get '/ramblings', to: redirect('/categories')
   get '/category/*other', to: redirect('/categories')
   get '/tags/social-media', to: redirect('/categories/marketing')

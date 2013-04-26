@@ -1,0 +1,31 @@
+<%- title "About Scott" -%>
+<%- content_for(:head) do -%>
+  <meta name="description" content="Scott Bartell is a Frontend Web Developer who loves to create">
+  <link rel="canonical" href="<%= categories_url %>">
+  <meta property="og:description" content="Scott Bartell is a Frontend Web Developer who loves to create">
+  <meta property="og:title" content="About Scott | ScottBartell.com">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="<%= categories_url %>">
+<%- end -%>
+<section id="post">
+  <article id="about" class="about">
+  <h1>I am Scott Bartell.</h1>
+  <h2>I'm a creator</h2>
+  <p>Nothing gets me more excited then creating. This world can use more elegance and beauty and that's what I've dedicated my life to. I hand make functional, elegant, and beautiful <%= link_to 'web applications', 'https://github.com/scottbartell' %>.</p>
+
+  <h2>I'm an entrepreneur</h2>
+  <p>I've had my fair share of ups and down - well, I've mostly had downs. But I've found that the adventure one goes on while creating an innovative product with virtually no resources can be well worth however painful the journey is.</p>
+  <p>In early 2012 I started <%= link_to 'Verified Local', 'http://www.verifiedlocal.org', class: 'vl' %> with the ambitious goal of altering the everyday purchasing habits of local communities.</p>
+  <p>In late 2012 I became a co-founder of <%= link_to 'CrowdEndowed', 'http://crowdendowed.com' %> with the (slightly crazy) determination to fix early stage funding for startups.</p>
+
+  <h2>I'm a marketer</h2>
+  <p>When I was 14 I began an internship at the Internet marketing firm <%= link_to 'V.M. Marketing Group', 'http://vmmarketinggroupinc.com/' %>. Throughout my almost 8 year stay at V.M., I worked on a ridiculously diverse array of projects that ranged all the way from search engine optimization to video editing and I even did some web development.</p>
+
+
+  <h2>I'm a student</h2>
+  <p>I will never stop learning. I have a BS in Business Administration, Marketing Concentration from the <%= link_to 'University at Buffalo', 'http://buffalo.edu' %>. Most recently I have been brushing up my Rails skills at <%= link_to 'Code School', 'http://www.codeschool.com/users/ScottBartell' %>. I have also taken a couple classes at: <%= link_to 'Stanford Venture Labs', 'https://venture-lab.org' %>, <%= link_to 'BerkeleyX', 'https://www.edx.org/university_profile/BerkeleyX' %>, and <%= link_to 'Udacity', 'https://www.udacity.com' %>. </p>
+
+  <h2>And I'm available for hire</h2>
+  <p><%= mail_to "me@scottbartell.com", 'Contact me.' %></p>
+</article>
+</section>
