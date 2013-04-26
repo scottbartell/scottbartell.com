@@ -11,7 +11,6 @@ end
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'
-
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -22,6 +21,7 @@ end
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
+gem 'foundation-icons-sass-rails', git: 'git://github.com/jasontorres/foundation-icons-sass-rails.git'
 
 # Pagination
 gem 'kaminari', git: 'git://github.com/amatsuda/kaminari.git'

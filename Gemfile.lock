@@ -6,6 +6,14 @@ GIT
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
 
+GIT
+  remote: git://github.com/jasontorres/foundation-icons-sass-rails.git
+  revision: 29671928b10902b78476d0ba29092fc55fa51014
+  specs:
+    foundation-icons-sass-rails (2.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -137,6 +145,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
+  foundation-icons-sass-rails!
   jbuilder (~> 1.0.1)
   jquery-rails
   kaminari!

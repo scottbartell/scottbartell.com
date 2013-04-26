@@ -21,7 +21,7 @@ $categories: javascript gold, startups orange, ruby red, management teal, market
 
 .category, .post .category {
   letter-spacing: 1px;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: $font-sans;
   font-size: .8em;
   text-transform: uppercase;
 

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Neuton', serif;
+  font-family: $font-serif;
   color: #555;
   font-size: 18px;
 }
@@ -42,7 +42,7 @@ a.twitter-username{
 header.main_head {
   nav ul {
     letter-spacing: 1px;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: $font-sans;
     font-size: .7em;
     font-weight: 700;
     list-style-type: none;
