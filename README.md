@@ -1,28 +1,35 @@
-== README
+# ScottBartell.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my blog that I made using Rails 4.
 
-Things you may want to cover:
+## Running Locally
+**Note:** I am using using Ruby 2.0.0 in production and locally
 
-* Ruby version
+Get the source:
 
-* System dependencies
+    $ git clone https://github.com/scottbartell/scottbartell.com.git
+    $ cd scottbartell.com
+    
+Bundle:
 
-* Configuration
+    $ bundle install
+    
+Create the database and copy the schema:
+    
+    $ rake db:setup
+    
+Start the server:
 
-* Database creation
+    $ rails server
+    
+Now everything should be all set, all you need to do is open your browser and go to <http://localhost:3000>.
 
-* Database initialization
+If you're having any issues feel free to [email me](mailto:me@scottbartell.com).
+    
+### Admin
 
-* How to run the test suite
+You can access the admin area by going to <http://localhost:3000/admin>.
 
-* Services (job queues, cache servers, search engines, etc.)
+The default username is: `admin` and the default password is: `passw0rd`.
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+You should change the username and password in production by setting the `ADMIN_USERNAME` and `ADMIN_PASSWORD` environment variables.
