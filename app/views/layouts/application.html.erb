@@ -9,6 +9,8 @@
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/scottbartell">
   <link rel="me" href="https://plus.google.com/u/0/109955571462751281352">
   <link href='http://fonts.googleapis.com/css?family=Neuton|Inconsolata|Merriweather+Sans:700' rel='stylesheet' type='text/css'>
+  <%= google_analytics %>
+  <%= gauges %>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -21,7 +23,5 @@
   <div id="content">
   <%= yield %>
   </div>
-<%= google_analytics %>
-<%= gauges %>
 </body>
 </html>
