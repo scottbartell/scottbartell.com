@@ -19,7 +19,7 @@ group :production do
 end
 
 gem 'jquery-rails'
-gem 'turbolinks'
+gem 'turbolinks', git: 'git://github.com/rails/turbolinks.git'
 gem 'jbuilder', '~> 1.0.1'
 gem 'foundation-icons-sass-rails', git: 'git://github.com/jasontorres/foundation-icons-sass-rails.git'
 
