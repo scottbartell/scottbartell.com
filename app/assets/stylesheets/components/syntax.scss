@@ -88,17 +88,17 @@ code {
 
     & > span {
       display: block;
-      padding: 0.25ex;
+      padding: 0.25em;
 
       &:before {
         font-size: .9em;
         color: #aaa;
         content: counter(linenumbers);
         counter-increment: linenumbers;
-        left: -3.2ex;
+        left: -3.2em;
         position: absolute;
         text-align: right;
-        width: 2.5ex;
+        width: 2.5em;
 
         -webkit-touch-callout: none;
         -webkit-user-select: none;
