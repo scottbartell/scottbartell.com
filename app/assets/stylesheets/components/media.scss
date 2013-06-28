@@ -18,9 +18,9 @@
 
 @media screen and (max-width: 750px) {
   #content {
-    margin-left: 5%;
+    margin-left: 10%;
     margin-top: 0px;
-    width: 90%;
+    width: 80%;
   }
 }
 
@@ -41,6 +41,15 @@
 }
 
 @media screen and (max-width: 400px) {
+  #about {
+    margin-top: -10px;
+    height: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: inherit;
+    @include rotate(0);
+  }
+
   #content {
     margin: 0;
     width: 100%;
